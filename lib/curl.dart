@@ -76,7 +76,7 @@ class CurlClient implements Client {
           args.add('--socks5-hostname');
           break;
       }
-      args.add(socksHostPort);
+      args.add(socksHostPort!);
     }
     args.addAll(['-X', method.toUpperCase()]);
     // --data parameter added in GET and POST Method. If method is 'GET', body may no have any effect in the request. UTF-8 encoding setted as default.
