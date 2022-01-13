@@ -51,7 +51,7 @@ class CurlClient implements Client {
     if (request.body != null && method != 'GET' && method != 'POST') {
       throw Exception('Sending body is only supported for POST method.');
     }
-    final args = <String?>[];
+    final args = <String>[];
     if (request.followRedirects == null || request.followRedirects!) {
       args.add('-L');
     }
