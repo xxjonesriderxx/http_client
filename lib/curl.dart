@@ -59,7 +59,7 @@ class CurlClient implements Client {
       args.add('--max-redirs');
       args.add(request.maxRedirects.toString());
     }
-    if (userAgent != null) args.addAll(['-A', userAgent]);
+    if (userAgent != null) args.addAll(['-A', userAgent!]);
 
     if (socksHostPort != null) {
       switch (socksProxyType) {
